@@ -13,9 +13,6 @@ build/
 .settings
 .springBeans
 .sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
 .idea
@@ -35,3 +32,11 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Secrets and Local Env ###
+.env
+.env.properties
+
+### Database ###
+*.db
+*.sqlite
