@@ -34,29 +34,40 @@ The server will start at `http://localhost:8080`.
 ## API Endpoints
 
 ### 1. Hello Check
-- **GET** `/api/hello`
-- Response: `Hello, user!`
+- **Method:** `GET`
+- **Path:** `/api/hello`
+- **Response:** `200 OK` - Text: `Hello, user!`
 
 ### 2. Register User
-- **POST** `/api/register`
-- Body (JSON):
+- **Method:** `POST`
+- **Path:** `/api/register`
+- **Headers:**
+  - `X-Source` (Optional): Source of request (default: `Web`)
+- **Body (JSON):**
   ```json
   {
       "username": "testuser",
       "email": "test@example.com",
-      "password": "secretpassword"
+      "password": "StrongPassword123!" 
   }
   ```
+- **Responses:**
+  - `201 Created`: User object (JSON)
+  - `400 Bad Request`: Validation error or Email already taken (JSON)
 
 ### 3. Login User
-- **POST** `/api/login`
-- Body (JSON):
+- **Method:** `POST`
+- **Path:** `/api/login`
+- **Body (JSON):**
   ```json
   {
       "email": "test@example.com",
-      "password": "secretpassword"
+      "password": "StrongPassword123!"
   }
   ```
+- **Responses:**
+  - `200 OK`: Success message (JSON)
+  - `400 Bad Request`: Invalid credentials (JSON)
 
 ## Project Structure
 - `model`: JPA entities

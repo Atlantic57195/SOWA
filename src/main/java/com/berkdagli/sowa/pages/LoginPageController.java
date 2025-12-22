@@ -1,11 +1,11 @@
 package com.berkdagli.sowa.pages;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class LoginPageController {
-    @GetMapping( "/login")
+    @GetMapping("/login")
     public String loginPage() {
         return "login";
     }

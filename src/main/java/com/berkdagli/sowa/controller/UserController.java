@@ -1,7 +1,10 @@
 package com.berkdagli.sowa.controller;
 
+import com.berkdagli.sowa.dto.UserLoginDto;
+import com.berkdagli.sowa.dto.UserRegisterDto;
 import com.berkdagli.sowa.model.User;
 import com.berkdagli.sowa.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,27 +21,25 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody Map<String, String> request) {
-        try {
-            User user = userService.createUser(
-                    request.get("username"),
-                    request.get("email"),
-                    request.get("password"));
-            return ResponseEntity.ok(user);
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+    public ResponseEntity<User> register(
+            @RequestHeader(value = "X-Source", required = false, defaultValue = "Web") String source,
+            @Valid @RequestBody UserRegisterDto request) {
+
+        // Log source (demonstration of @RequestHeader)
+        System.out.println("Registration request from source: " + source);
+
+        User user = userService.createUser(
+                request.getUsername(),
+                request.getEmail(),
+                request.getPassword());
+        return ResponseEntity.status(201).body(user);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
-        try {
-            User user = userService.authenticate(
-                    request.get("email"),
-                    request.get("password"));
-            return ResponseEntity.ok("Login successful for user: " + user.getUsername());
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(401).body(e.getMessage());
-        }
+    public ResponseEntity<?> login(@Valid @RequestBody UserLoginDto request) {
+        User user = userService.authenticate(
+                request.getEmail(),
+                request.getPassword());
+        return ResponseEntity.ok(Map.of("message", "Login successful", "username", user.getUsername()));
     }
 }
