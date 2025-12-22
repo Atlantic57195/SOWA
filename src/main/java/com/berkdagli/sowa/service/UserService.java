@@ -2,7 +2,6 @@ package com.berkdagli.sowa.service;
 
 import com.berkdagli.sowa.model.User;
 import com.berkdagli.sowa.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // We will need to configure security bean for this
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
