@@ -16,10 +16,9 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF for simple testing
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/hello", "/api/register", "/api/login", "/h2-console/**").permitAll()
+                        .requestMatchers("/hello/**", "/login", "/api/register", "/api/login", "/h2-console/**").permitAll()
                         .anyRequest().authenticated())
-                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.disable())); // For H2 console (if
-                                                                                                   // used)
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.disable())); // For H2 console (if // used)
 
         return http.build();
     }

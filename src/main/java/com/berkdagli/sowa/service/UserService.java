@@ -25,7 +25,7 @@ public class UserService {
             throw new RuntimeException("Email already taken");
         }
         String encodedPassword = passwordEncoder.encode(password);
-        User user = new User(username, email, encodedPassword);
+        User user = new User(username, email, encodedPassword, "USER");
         return userRepository.save(user);
     }
 
