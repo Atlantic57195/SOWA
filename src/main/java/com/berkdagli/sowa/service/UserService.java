@@ -2,7 +2,6 @@ package com.berkdagli.sowa.service;
 
 import com.berkdagli.sowa.model.User;
 import com.berkdagli.sowa.repository.UserRepository;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // We will need to configure security bean for this
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +13,9 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
-        this.passwordEncoder = new BCryptPasswordEncoder();
+        this.passwordEncoder = passwordEncoder;
     }
 
     public User createUser(String username, String email, String password) {

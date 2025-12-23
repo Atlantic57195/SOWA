@@ -16,10 +16,16 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF for simple testing
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/hello/**", "/login","/register", "/api/register", "/api/login", "/h2-console/**","/css/**","/js/**").permitAll()
-                        .anyRequest().authenticated())
-                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.disable())); // For H2 console (if // used)
+                        .requestMatchers("/hello/**", "/login", "/register", "/api/register", "/api/login",
+                                "/h2-console/**", "/css/**", "/js/**")
+                        .permitAll()
+                        .anyRequest().authenticated());
 
         return http.build();
+    }
+
+    @Bean
+    public org.springframework.security.crypto.password.PasswordEncoder passwordEncoder() {
+        return new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder();
     }
 }

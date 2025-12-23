@@ -33,7 +33,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(errorResponse);
     }
 
-    // Handle generic RuntimeExceptions (e.g. logic errors)
+    // Handle generic RuntimeExceptions (eg logic errors)
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleRuntimeException(RuntimeException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
