@@ -25,7 +25,6 @@ public class UserController {
             @RequestHeader(value = "X-Source", required = false, defaultValue = "Web") String source,
             @Valid @RequestBody UserRegisterDto request) {
 
-
         System.out.println("Registration request from source: " + source);
 
         User user = userService.createUser(

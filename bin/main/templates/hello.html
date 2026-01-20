@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello - SOWA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .dashboard-card {
+            background-color: #1e1e1e;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-admin {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #ffd700;
+            color: #000;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn-admin:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="dashboard-card">
+        <h2>Welcome, User!</h2>
+        <p>You have successfully logged in.</p>
+
+        <div sec:authorize="hasRole('ADMIN')">
+            <a href="/admin" class="btn-admin">Go to Admin Dashboard</a>
+        </div>
+
+        <a href="/notes" class="btn-admin" style="background-color: #007bff; color: white; margin-top: 10px;">My
+            Notes</a>
+
+        <form th:action="@{/logout}" method="post" style="margin-top: 2rem;">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SOWA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .dashboard-card {
+            background-color: #1e1e1e;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            /* Gold border for admin */
+        }
+
+        h2 {
+            color: #ffd700;
+            /* Gold text for admin header */
+        }
+
+        .admin-badge {
+            background-color: #ffd700;
+            color: #000;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="dashboard-card">
+        <div class="admin-badge">ADMINISTRATOR</div>
+        <h2>Admin Dashboard</h2>
+        <p>Welcome to the restricted administration area.</p>
+        <p style="opacity: 0.7; margin-bottom: 2rem;">You have full control over the system.</p>
+
+        <h3 style="color: #ffd700; margin-top: 2rem;">All Notes</h3>
+        <table style="width: 100%; color: white; border-collapse: collapse; margin-top: 1rem;">
+            <thead>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <th style="padding: 10px;">ID</th>
+                    <th style="padding: 10px;">User</th>
+                    <th style="padding: 10px;">Title</th>
+                    <th style="padding: 10px;">Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="note : ${notes}" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td th:text="${note.id}" style="padding: 8px;">1</td>
+                    <td th:text="${note.user.email}" style="padding: 8px;">user@example.com</td>
+                    <td th:text="${note.title}" style="padding: 8px;">Title</td>
+                    <td th:text="${#strings.abbreviate(note.content, 50)}" style="padding: 8px;">Content...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+
+</html>
