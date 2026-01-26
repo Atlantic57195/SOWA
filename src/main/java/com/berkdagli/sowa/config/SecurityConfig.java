@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -29,10 +30,17 @@ public class SecurityConfig {
                                                 .logoutUrl("/logout")
                                                 .logoutSuccessUrl("/login?logout")
                                                 .permitAll())
-                                .exceptionHandling(e -> e.accessDeniedPage("/access-denied"));
-                http.csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"));
-                http.headers(headers -> headers.frameOptions(
-                                org.springframework.security.config.annotation.web.configurers.HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+                                .exceptionHandling(e -> e.accessDeniedPage("/access-denied"))
+                                .headers(headers -> headers
+                                                .contentSecurityPolicy(csp -> csp.policyDirectives(
+                                                                "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline';"))
+                                                .referrerPolicy(referrer -> referrer.policy(
+                                                                org.springframework.security.web.header.writers.ReferrerPolicyHeaderWriter.ReferrerPolicy.STRICT_ORIGIN_WHEN_CROSS_ORIGIN))
+                                                .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)
+                                                .httpStrictTransportSecurity(hsts -> hsts // Bonus: HSTS
+                                                                .includeSubDomains(true)
+                                                                .preload(true)
+                                                                .maxAgeInSeconds(31536000)));
 
                 return http.build();
         }

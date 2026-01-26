@@ -12,9 +12,6 @@ public interface NoteRepository extends JpaRepository<Note, Long> {
     // Standard JPA method
     List<Note> findByUserId(Long userId);
 
-    // Requirement: Use prepared statements for at least one query.
-    // Native query with named parameters (which uses prepared statements under the
-    // hood in Hibernate/JPA)
     @Query(value = "SELECT * FROM notes WHERE user_id = :userId", nativeQuery = true)
     List<Note> findByUserIdNative(@Param("userId") Long userId);
 }
