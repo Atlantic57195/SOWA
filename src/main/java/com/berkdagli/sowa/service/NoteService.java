@@ -18,6 +18,8 @@ public class NoteService {
     private final NoteRepository noteRepository;
     private final UserRepository userRepository;
 
+    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(NoteService.class); // init logger
+
     public NoteService(NoteRepository noteRepository, UserRepository userRepository) {
         this.noteRepository = noteRepository;
         this.userRepository = userRepository;
@@ -25,10 +27,6 @@ public class NoteService {
 
     public List<Note> findAllByUserEmail(String email) {
         User user = getUserByEmail(email);
-        // Using the native query as per requirement test, though standard findByUserId
-        // works too.
-        // We can use the standard one for simplicity here, or use the native one.
-        // Let's use the native one to prove it works in the application flow.
         return noteRepository.findByUserIdNative(user.getId());
     }
 
@@ -41,6 +39,10 @@ public class NoteService {
                 .orElseThrow(() -> new RuntimeException("Note not found"));
 
         if (!note.getUser().getEmail().equals(email)) {
+            // SECURE LOGGING: Log unauthorized access attempt to a specific note
+            logger.warn(
+                    "Unauthorized note access attempt. User: '{}' tried to access Note ID: '{}' owned by User: '{}'",
+                    email, id, note.getUser().getEmail());
             throw new AccessDeniedException("You do not have permission to access this note");
         }
         return note;
