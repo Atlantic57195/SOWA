@@ -2,6 +2,7 @@ package com.berkdagli.sowa.controller;
 
 import com.berkdagli.sowa.dto.UserLoginDto;
 import com.berkdagli.sowa.dto.UserRegisterDto;
+import com.berkdagli.sowa.dto.UserResponseDto;
 import com.berkdagli.sowa.model.User;
 import com.berkdagli.sowa.service.UserService;
 import jakarta.validation.Valid;
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<User> register(
+    public ResponseEntity<UserResponseDto> register(
             @RequestHeader(value = "X-Source", required = false, defaultValue = "Web") String source,
             @Valid @RequestBody UserRegisterDto request) {
 
@@ -31,7 +32,7 @@ public class UserController {
                 request.getUsername(),
                 request.getEmail(),
                 request.getPassword());
-        return ResponseEntity.status(201).body(user);
+        return ResponseEntity.status(201).body(UserResponseDto.fromUser(user));
     }
 
     @PostMapping("/login")

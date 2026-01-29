@@ -51,8 +51,21 @@ public class NoteController {
         return "redirect:/notes";
     }
 
+    @GetMapping({"/edit", "/edit/"})
+    public String handleMissingId(RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", "You must type valid ID.");
+        return "redirect:/notes";
+    }
+
     @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable Long id, Model model, Principal principal) {
+    public String showEditForm(@PathVariable Long id,
+                               Model model,
+                               Principal principal,
+                               RedirectAttributes redirectAttributes) {
+        if (id == null || id < 0) {
+            redirectAttributes.addFlashAttribute("errorMessage","Note ID cannot be null or less than 0.");
+            return "redirect:/notes";
+        }
         try {
             Note note = noteService.findByIdAndUserEmail(id, principal.getName());
             NoteDto noteDto = new NoteDto();

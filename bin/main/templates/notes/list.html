@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>My Notes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Using a simple CDN for styling if not present, but checking other files first suggests standard HTML -->
     <style>
-        body { font-family: sans-serif; margin: 2rem; }
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        .btn { padding: 5px 10px; text-decoration: none; color: white; background-color: #007bff; border-radius: 4px; border: none; cursor: pointer;}
-        .btn-danger { background-color: #dc3545; }
-        .alert { padding: 10px; background-color: #d4edda; color: #155724; margin-bottom: 1rem; }
-        .alert-error { background-color: #f8d7da; color: #721c24; }
+        body {
+            font-family: sans-serif;
+            margin: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .alert {
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            margin-bottom: 1rem;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
     </style>
 </head>
+
 <body>
 
     <h1>My Notes</h1>
-    
+
     <div th:if="${successMessage}" class="alert">
         <p th:text="${successMessage}"></p>
     </div>
@@ -44,10 +85,11 @@
                 <td th:text="${note.content}">Content</td>
                 <td>
                     <a th:href="@{/notes/edit/{id}(id=${note.id})}" class="btn">Edit</a>
-                    
+
                     <form th:action="@{/notes/delete/{id}(id=${note.id})}" method="post" style="display:inline;">
-                         <!-- CSRF token is automatically added by Spring Security if using th:action with form -->
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                        <!-- CSRF token is automatically added by Spring Security if using th:action with form -->
+                        <button type="submit" class="btn btn-danger"
+                            onclick="return confirm('Are you sure?')">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -58,4 +100,5 @@
     </table>
 
 </body>
+
 </html>

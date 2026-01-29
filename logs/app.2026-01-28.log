@@ -1,0 +1,904 @@
+2026-01-28 03:20:15.107 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 28084 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 03:20:15.111 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 03:20:15.141 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 03:20:15.141 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 03:20:15.783 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 03:20:15.827 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2026-01-28 03:20:16.262 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 03:20:16.276 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 03:20:16.277 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 03:20:16.315 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1172 ms
+2026-01-28 03:20:16.677 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 03:20:16.802 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@55fba73c
+2026-01-28 03:20:16.804 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 03:20:16.816 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 03:20:16.848 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.015s)
+2026-01-28 03:20:16.852 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 03:20:16.854 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 03:20:16.913 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 03:20:16.970 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 03:20:17.321 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 03:20:17.383 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 03:20:18.004 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 03:20:18.036 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 03:20:18.099 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 03:20:18.303 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 03:20:18.375 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 03:20:18.790 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 03:20:18.851 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 03:20:18.859 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 4.161 seconds (process running for 4.828)
+2026-01-28 03:20:19.477 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 03:20:19.478 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 03:20:19.479 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 03:20:24.454 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:35:00.569 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAuthenticationFailureHandler - Failed login attempt. Username: 'null', IP: '0:0:0:0:0:0:0:1', User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', Reason: Bad credentials
+2026-01-28 03:39:26.828 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 03:39:26.862 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 03:39:26.869 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 03:39:26.872 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 03:39:26.874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 03:39:32.096 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 18140 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 03:39:32.099 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 03:39:32.136 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 03:39:32.136 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 03:39:32.784 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 03:39:32.828 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2026-01-28 03:39:33.205 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 03:39:33.214 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 03:39:33.215 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 03:39:33.257 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1119 ms
+2026-01-28 03:39:33.569 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 03:39:33.703 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@5cce8da8
+2026-01-28 03:39:33.705 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 03:39:33.717 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 03:39:33.743 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.012s)
+2026-01-28 03:39:33.747 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 03:39:33.748 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 03:39:33.794 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 03:39:33.836 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 03:39:34.133 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 03:39:34.169 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 03:39:34.721 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 03:39:34.745 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 03:39:34.810 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 03:39:34.991 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 03:39:35.042 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 03:39:35.473 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 03:39:35.525 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 03:39:35.532 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.815 seconds (process running for 4.34)
+2026-01-28 03:39:35.927 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 03:39:35.928 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 03:39:35.929 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 03:43:04.246 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.berkdagli.sowa.model.User> com.berkdagli.sowa.controller.UserController.register(java.lang.String,com.berkdagli.sowa.dto.UserRegisterDto) with 6 errors: [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one special character (@#$%^&+=!)]] [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [NotBlank.userRegisterDto.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password is required]] [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one lowercase letter]] [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must be at least 8 characters long]] [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one digit]] [Field error in object 'userRegisterDto' on field 'password': rejected value []; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one uppercase letter]] ]
+2026-01-28 03:43:20.455 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.berkdagli.sowa.model.User> com.berkdagli.sowa.controller.UserController.register(java.lang.String,com.berkdagli.sowa.dto.UserRegisterDto) with 4 errors: [Field error in object 'userRegisterDto' on field 'password': rejected value [A]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must be at least 8 characters long]] [Field error in object 'userRegisterDto' on field 'password': rejected value [A]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one digit]] [Field error in object 'userRegisterDto' on field 'password': rejected value [A]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one lowercase letter]] [Field error in object 'userRegisterDto' on field 'password': rejected value [A]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one special character (@#$%^&+=!)]] ]
+2026-01-28 03:43:32.482 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.berkdagli.sowa.model.User> com.berkdagli.sowa.controller.UserController.register(java.lang.String,com.berkdagli.sowa.dto.UserRegisterDto) with 2 errors: [Field error in object 'userRegisterDto' on field 'password': rejected value [A1!]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must be at least 8 characters long]] [Field error in object 'userRegisterDto' on field 'password': rejected value [A1!]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must contain at least one lowercase letter]] ]
+2026-01-28 03:43:37.486 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.berkdagli.sowa.model.User> com.berkdagli.sowa.controller.UserController.register(java.lang.String,com.berkdagli.sowa.dto.UserRegisterDto): [Field error in object 'userRegisterDto' on field 'password': rejected value [Aa1!]; codes [StrongPassword.userRegisterDto.password,StrongPassword.password,StrongPassword.java.lang.String,StrongPassword]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.password,password]; arguments []; default message [password]]; default message [Password must be at least 8 characters long]] ]
+2026-01-28 03:43:41.741 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: Email already taken]
+2026-01-28 03:47:46.493 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 03:47:46.529 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 03:47:46.534 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 03:47:46.536 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 03:47:46.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 03:47:49.699 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 24828 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 03:47:49.701 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 03:47:49.733 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 03:47:49.733 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 03:47:50.367 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 03:47:50.407 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2026-01-28 03:47:50.798 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 03:47:50.810 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 03:47:50.810 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 03:47:50.849 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1116 ms
+2026-01-28 03:47:51.199 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 03:47:51.334 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@3c3e9858
+2026-01-28 03:47:51.336 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 03:47:51.349 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 03:47:51.377 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.014s)
+2026-01-28 03:47:51.381 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 03:47:51.382 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 03:47:51.425 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 03:47:51.459 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 03:47:51.780 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 03:47:51.825 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 03:47:52.405 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 03:47:52.434 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 03:47:52.492 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 03:47:52.672 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 03:47:52.727 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 03:47:53.143 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 03:47:53.192 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 03:47:53.198 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.877 seconds (process running for 4.429)
+2026-01-28 03:47:53.511 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 03:47:53.511 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 03:47:53.512 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 03:49:11.346 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.berkdagli.sowa.dto.UserResponseDto> com.berkdagli.sowa.controller.UserController.register(java.lang.String,com.berkdagli.sowa.dto.UserRegisterDto): [Field error in object 'userRegisterDto' on field 'email': rejected value []; codes [NotBlank.userRegisterDto.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegisterDto.email,email]; arguments []; default message [email]]; default message [Email is required]] ]
+2026-01-28 03:52:42.704 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:52:42.717 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:52:49.500 [http-nio-8080-exec-2] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:52:49.504 [http-nio-8080-exec-8] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:53:24.600 [http-nio-8080-exec-3] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:53:24.603 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:53:31.800 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:53:31.802 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:55:21.226 [http-nio-8080-exec-7] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/logout', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:55:21.228 [http-nio-8080-exec-3] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:55:43.595 [http-nio-8080-exec-6] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/logout', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:55:43.599 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:56:25.094 [http-nio-8080-exec-3] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:56:25.098 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:56:45.574 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:56:45.576 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:57:30.200 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:57:30.203 [http-nio-8080-exec-7] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:57:45.493 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:57:45.495 [http-nio-8080-exec-6] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:57:50.416 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:57:50.419 [http-nio-8080-exec-5] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 03:57:53.493 [http-nio-8080-exec-8] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 03:57:53.496 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 04:00:28.548 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/hello', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 04:05:37.085 [http-nio-8080-exec-3] WARN  c.berkdagli.sowa.service.NoteService - Unauthorized note access attempt. User: 'postman@example.com' tried to access Note ID: '7' owned by User: 'regular@example.com'
+2026-01-28 04:18:04.232 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:18:04.268 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:18:04.274 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:18:04.276 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:18:04.278 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:18:07.073 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 28112 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:18:07.076 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:18:07.109 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:18:07.110 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:18:07.711 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:18:07.757 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:18:08.148 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:18:08.159 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:18:08.159 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:18:08.199 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1089 ms
+2026-01-28 04:18:08.516 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:18:08.653 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@380efb20
+2026-01-28 04:18:08.653 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:18:08.664 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:18:08.690 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.011s)
+2026-01-28 04:18:08.693 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:18:08.695 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:18:08.733 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:18:08.771 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:18:09.057 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:18:09.096 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:18:09.643 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:18:09.664 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:18:09.720 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:18:09.885 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:18:09.941 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:18:10.354 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:18:10.412 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:18:10.419 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.7 seconds (process running for 4.231)
+2026-01-28 04:18:10.620 [RMI TCP Connection(4)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:18:10.620 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:18:10.621 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:25:49.402 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:25:49.438 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:25:49.441 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:25:49.443 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:25:49.446 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:25:51.099 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 4736 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:25:51.102 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:25:51.133 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:25:51.134 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:25:51.709 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:25:51.750 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:25:52.130 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:25:52.141 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:25:52.141 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:25:52.182 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1048 ms
+2026-01-28 04:25:52.517 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:25:52.640 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@65d864e1
+2026-01-28 04:25:52.641 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:25:52.653 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:25:52.678 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.012s)
+2026-01-28 04:25:52.681 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:25:52.683 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:25:52.722 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:25:52.760 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:25:53.057 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:25:53.095 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:25:53.650 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:25:53.676 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:25:53.730 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:25:53.911 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:25:53.966 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:25:54.399 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:25:54.449 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:25:54.457 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.722 seconds (process running for 4.231)
+2026-01-28 04:25:55.030 [RMI TCP Connection(2)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:25:55.030 [RMI TCP Connection(2)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:25:55.031 [RMI TCP Connection(2)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:27:24.175 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 19 class path changes (0 additions, 2 deletions, 17 modifications)
+2026-01-28 04:27:24.181 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:27:24.224 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:27:24.231 [Thread-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:27:24.234 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:27:24.235 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:27:24.345 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 4736 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:27:24.346 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:27:24.577 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:27:24.593 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:27:24.718 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:27:24.719 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:27:24.719 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:27:24.743 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 396 ms
+2026-01-28 04:27:24.825 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-28 04:27:24.826 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@6040adac
+2026-01-28 04:27:24.826 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-28 04:27:24.827 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:27:24.830 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-01-28 04:27:24.830 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:27:24.830 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:27:24.839 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:27:24.860 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:27:24.862 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:27:24.900 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:27:24.903 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:27:24.970 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:27:24.999 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:27:25.177 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:27:25.204 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:27:25.210 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 0.895 seconds (process running for 94.983)
+2026-01-28 04:27:25.212 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-01-28 04:32:33.998 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:32:33.998 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:32:33.999 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:39:54.721 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:39:54.757 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:39:54.760 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:39:54.761 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-28 04:39:54.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-28 04:39:57.362 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 29328 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:39:57.365 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:39:57.395 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:39:57.395 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:39:58.026 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:39:58.061 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:39:58.451 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:39:58.460 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:39:58.460 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:39:58.507 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1111 ms
+2026-01-28 04:39:58.842 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:39:58.979 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@220497ef
+2026-01-28 04:39:58.980 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:39:58.991 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:39:59.021 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.015s)
+2026-01-28 04:39:59.026 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:39:59.028 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:39:59.071 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:39:59.107 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:39:59.429 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:39:59.472 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:40:00.077 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:40:00.108 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:40:00.170 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:40:00.347 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:40:00.411 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:40:00.842 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:40:00.895 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:40:00.903 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.941 seconds (process running for 4.448)
+2026-01-28 04:40:01.196 [RMI TCP Connection(4)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:40:01.196 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:40:01.198 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:42:32.091 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "abd"]
+2026-01-28 04:44:00.522 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "acs"]
+2026-01-28 04:45:48.100 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:45:48.137 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:45:48.142 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:45:48.145 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:45:48.146 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:45:51.066 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 28956 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:45:51.079 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:45:51.168 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:45:51.168 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:45:52.073 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:45:52.114 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:45:52.482 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:45:52.491 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:45:52.492 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:45:52.530 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1360 ms
+2026-01-28 04:45:52.839 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:45:52.969 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6dd53d40
+2026-01-28 04:45:52.971 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:45:52.984 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:45:53.012 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.013s)
+2026-01-28 04:45:53.016 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:45:53.017 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:45:53.064 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:45:53.099 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:45:53.392 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:45:53.435 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:45:53.959 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:45:53.982 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:45:54.041 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:45:54.214 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:45:54.269 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:45:54.675 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:45:54.724 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:45:54.730 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 4.492 seconds (process running for 5.025)
+2026-01-28 04:45:54.916 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:45:54.916 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:45:54.917 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:48:21.211 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:48:21.246 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:48:21.250 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:48:21.253 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:48:21.254 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:48:23.619 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 12884 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:48:23.622 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:48:23.656 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:48:23.656 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:48:24.246 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:48:24.285 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:48:24.665 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:48:24.677 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:48:24.677 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:48:24.721 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1065 ms
+2026-01-28 04:48:25.026 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:48:25.159 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@25940b7f
+2026-01-28 04:48:25.159 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:48:25.171 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:48:25.198 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.014s)
+2026-01-28 04:48:25.203 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:48:25.204 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:48:25.260 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:48:25.318 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:48:25.675 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:48:25.721 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:48:26.406 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:48:26.430 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:48:26.487 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:48:26.668 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:48:26.729 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:48:27.143 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:48:27.199 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:48:27.205 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.962 seconds (process running for 4.444)
+2026-01-28 04:48:27.510 [RMI TCP Connection(4)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:48:27.511 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:48:27.511 [RMI TCP Connection(4)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-28 04:48:37.612 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: Note ID cannot be null or less than 0.]
+2026-01-28 04:51:44.803 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-01-28 04:51:44.808 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:51:44.854 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:51:44.860 [Thread-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:51:44.863 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:51:44.865 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:51:44.965 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 12884 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:51:44.965 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:51:45.189 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:51:45.202 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:51:45.328 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:51:45.329 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:51:45.329 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:51:45.353 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 386 ms
+2026-01-28 04:51:45.422 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-28 04:51:45.423 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@40fc0027
+2026-01-28 04:51:45.423 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-28 04:51:45.424 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:51:45.427 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-01-28 04:51:45.427 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:51:45.429 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:51:45.438 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:51:45.463 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:51:45.467 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:51:45.509 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:51:45.512 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:51:45.579 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:51:45.622 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:51:45.894 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:51:45.912 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:51:45.917 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 0.981 seconds (process running for 203.156)
+2026-01-28 04:51:45.920 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-01-28 04:51:47.332 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-01-28 04:51:47.333 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:51:47.377 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:51:47.383 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:51:47.383 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-28 04:51:47.384 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-28 04:51:47.471 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 12884 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:51:47.471 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:51:47.668 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:51:47.679 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:51:47.778 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:51:47.779 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:51:47.779 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:51:47.802 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 329 ms
+2026-01-28 04:51:47.859 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-01-28 04:51:47.860 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.sqlite.jdbc4.JDBC4Connection@1dd8e994
+2026-01-28 04:51:47.860 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-01-28 04:51:47.861 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:51:47.867 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-01-28 04:51:47.868 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:51:47.868 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:51:47.877 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:51:47.898 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:51:47.900 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:51:47.942 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:51:47.945 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:51:48.003 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:51:48.026 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:51:48.183 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:51:48.199 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:51:48.204 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 0.763 seconds (process running for 205.443)
+2026-01-28 04:51:48.206 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-01-28 04:52:33.245 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-01-28 04:52:33.247 [Thread-9] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:52:33.283 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:52:33.285 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:52:33.285 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-01-28 04:52:33.287 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-01-28 04:52:33.351 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 12884 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:52:33.351 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:52:33.493 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:52:33.502 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:52:33.576 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:52:33.576 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:52:33.576 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:52:33.594 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 242 ms
+2026-01-28 04:52:33.630 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2026-01-28 04:52:33.631 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.sqlite.jdbc4.JDBC4Connection@589a731b
+2026-01-28 04:52:33.631 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2026-01-28 04:52:33.631 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:52:33.634 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-01-28 04:52:33.634 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:52:33.635 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:52:33.642 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:52:33.658 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:52:33.660 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:52:33.691 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:52:33.694 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:52:33.739 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:52:33.758 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:52:33.979 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:52:34.000 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:52:34.002 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 0.669 seconds (process running for 251.241)
+2026-01-28 04:52:34.003 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-01-28 04:52:35.392 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-01-28 04:52:35.393 [Thread-13] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:52:35.423 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:52:35.425 [Thread-13] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:52:35.425 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2026-01-28 04:52:35.425 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2026-01-28 04:52:35.484 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 12884 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:52:35.485 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:52:35.622 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:52:35.631 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:52:35.698 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:52:35.698 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:52:35.698 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:52:35.717 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 232 ms
+2026-01-28 04:52:35.754 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2026-01-28 04:52:35.755 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.sqlite.jdbc4.JDBC4Connection@1fd9b88a
+2026-01-28 04:52:35.755 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2026-01-28 04:52:35.755 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:52:35.758 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-01-28 04:52:35.758 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:52:35.758 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:52:35.767 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:52:35.781 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:52:35.782 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:52:35.809 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:52:35.811 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:52:35.850 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:52:35.865 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:52:35.984 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:52:35.996 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:52:35.999 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 0.53 seconds (process running for 253.238)
+2026-01-28 04:52:36.000 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-01-28 04:52:58.755 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:52:58.788 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:52:58.790 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:52:58.791 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2026-01-28 04:52:58.791 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2026-01-28 04:53:01.704 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 5640 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:53:01.708 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:53:01.762 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:53:01.762 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:53:02.424 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:53:02.462 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:53:02.868 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:53:02.877 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:53:02.878 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:53:02.918 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1155 ms
+2026-01-28 04:53:03.226 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:53:03.365 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@220497ef
+2026-01-28 04:53:03.367 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:53:03.377 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:53:03.405 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.014s)
+2026-01-28 04:53:03.409 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:53:03.411 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:53:03.454 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:53:03.487 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:53:03.786 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:53:03.826 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:53:04.366 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:53:04.392 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:53:04.452 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:53:04.633 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:53:04.689 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:53:05.080 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:53:05.129 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:53:05.136 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 4.067 seconds (process running for 4.604)
+2026-01-28 04:53:05.704 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:53:05.704 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:53:05.705 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:53:20.534 [http-nio-8080-exec-5] WARN  c.berkdagli.sowa.service.NoteService - Unauthorized note access attempt. User: 'postman@example.com' tried to access Note ID: '3' owned by User: 'test@example.com'
+2026-01-28 04:53:30.480 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource notes/edit for request '/notes/edit/'.]
+2026-01-28 04:55:32.796 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:55:32.832 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:55:32.836 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:55:32.838 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:55:32.840 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:55:35.969 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 28600 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:55:35.972 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:55:36.020 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:55:36.020 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:55:36.634 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:55:36.671 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:55:37.102 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:55:37.111 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:55:37.111 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:55:37.155 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1135 ms
+2026-01-28 04:55:37.461 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:55:37.589 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@777bdab6
+2026-01-28 04:55:37.591 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:55:37.601 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:55:37.630 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.013s)
+2026-01-28 04:55:37.634 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:55:37.636 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:55:37.684 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:55:37.726 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:55:38.136 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:55:38.203 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:55:38.969 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:55:39.008 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:55:39.112 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:55:39.369 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:55:39.455 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:55:40.036 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:55:40.110 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:55:40.120 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 4.896 seconds (process running for 5.443)
+2026-01-28 04:55:40.168 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:55:40.168 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:55:40.169 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:57:16.049 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:57:16.085 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:57:16.090 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:57:16.092 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:57:16.093 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:57:18.856 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 16632 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:57:18.859 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:57:18.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:57:18.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:57:19.523 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:57:19.565 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:57:19.936 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:57:19.944 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:57:19.945 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:57:19.985 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1080 ms
+2026-01-28 04:57:20.303 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:57:20.430 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@33c74c0b
+2026-01-28 04:57:20.433 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:57:20.444 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:57:20.469 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.012s)
+2026-01-28 04:57:20.474 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:57:20.475 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:57:20.516 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:57:20.555 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:57:20.891 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:57:20.947 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:57:21.644 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:57:21.674 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:57:21.752 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:57:21.967 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:57:22.043 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:57:22.645 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:57:22.727 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:57:22.735 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 4.402 seconds (process running for 4.943)
+2026-01-28 04:57:22.878 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:57:22.878 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:57:22.879 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:57:22.996 [http-nio-8080-exec-1] WARN  c.berkdagli.sowa.service.NoteService - Unauthorized note access attempt. User: 'postman@example.com' tried to access Note ID: '3' owned by User: 'test@example.com'
+2026-01-28 04:57:47.495 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:57:47.529 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:57:47.534 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:57:47.535 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:57:47.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 04:57:50.124 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 3704 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 04:57:50.127 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 04:57:50.169 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 04:57:50.169 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 04:57:50.773 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 04:57:50.811 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2026-01-28 04:57:51.260 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 04:57:51.267 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 04:57:51.268 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 04:57:51.310 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1141 ms
+2026-01-28 04:57:51.640 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 04:57:51.769 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@220497ef
+2026-01-28 04:57:51.770 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 04:57:51.782 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 04:57:51.811 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.014s)
+2026-01-28 04:57:51.814 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 04:57:51.817 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 04:57:51.862 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 04:57:51.900 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 04:57:52.206 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 04:57:52.250 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 04:57:52.784 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 04:57:52.809 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:57:52.859 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 04:57:53.029 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 04:57:53.092 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 04:57:53.512 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 04:57:53.571 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 04:57:53.577 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.996 seconds (process running for 4.473)
+2026-01-28 04:57:53.783 [RMI TCP Connection(2)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 04:57:53.783 [RMI TCP Connection(2)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 04:57:53.784 [RMI TCP Connection(2)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-28 04:58:42.222 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "*1"]
+2026-01-28 04:59:51.909 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 04:59:51.943 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 04:59:51.949 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 04:59:51.951 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 04:59:51.953 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-28 05:02:25.057 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Starting SowaApplication using Java 17.0.17 with PID 4872 (D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA\build\classes\java\main started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-28 05:02:25.060 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 05:02:25.093 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-28 05:02:25.093 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-28 05:02:25.792 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28 05:02:25.833 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2026-01-28 05:02:26.225 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-28 05:02:26.233 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 05:02:26.233 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-01-28 05:02:26.276 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1183 ms
+2026-01-28 05:02:26.612 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-28 05:02:26.752 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@407c834d
+2026-01-28 05:02:26.753 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-28 05:02:26.765 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-28 05:02:26.792 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.012s)
+2026-01-28 05:02:26.796 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-28 05:02:26.797 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-28 05:02:26.846 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28 05:02:26.883 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-28 05:02:27.209 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28 05:02:27.266 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-28 05:02:27.805 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28 05:02:27.831 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 05:02:27.884 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28 05:02:28.055 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28 05:02:28.110 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-28 05:02:28.540 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-28 05:02:28.599 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-28 05:02:28.606 [restartedMain] INFO  com.berkdagli.sowa.SowaApplication - Started SowaApplication in 3.926 seconds (process running for 4.402)
+2026-01-28 05:02:28.908 [RMI TCP Connection(1)-192.168.0.200] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 05:02:28.908 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 05:02:28.909 [RMI TCP Connection(1)-192.168.0.200] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-28 05:05:48.124 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/notes', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:05:48.141 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:06:14.590 [http-nio-8080-exec-3] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:06:14.594 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:06:27.233 [http-nio-8080-exec-6] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/notes', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:06:27.236 [http-nio-8080-exec-7] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:06:46.083 [http-nio-8080-exec-1] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/notes', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:06:46.085 [http-nio-8080-exec-2] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:07:06.922 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:07:06.924 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:10:28.679 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/notes', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:10:28.682 [http-nio-8080-exec-6] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:13:36.795 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'postman@example.com', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:14:00.474 [http-nio-8080-exec-2] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'postman@example.com', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:14:18.793 [http-nio-8080-exec-5] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:14:18.796 [http-nio-8080-exec-10] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:14:21.533 [http-nio-8080-exec-2] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/login', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:14:21.535 [http-nio-8080-exec-3] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:14:33.666 [http-nio-8080-exec-9] WARN  c.b.s.s.CustomAccessDeniedHandler - Unauthorized access attempt (403). User: 'Anonymous', Resource: '/notes', IP: '0:0:0:0:0:0:0:1'
+2026-01-28 05:14:33.668 [http-nio-8080-exec-6] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/access-denied', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:15:53.133 [http-nio-8080-exec-4] WARN  c.b.s.s.CustomAuthenticationEntryPoint - Unauthenticated access attempt (401). Resource: '/hello', IP: '0:0:0:0:0:0:0:1', Msg: Full authentication is required to access this resource
+2026-01-28 05:16:27.718 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 05:16:27.755 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-28 05:16:27.760 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28 05:16:27.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-28 05:16:27.764 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

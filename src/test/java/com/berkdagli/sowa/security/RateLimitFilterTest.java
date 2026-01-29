@@ -15,8 +15,8 @@ class RateLimitFilterTest {
     @Test
     void testRateLimit() throws ServletException, IOException {
         RateLimitFilter filter = new RateLimitFilter();
-        // Simulate 1000 requests from same IP (within capacity)
-        for (int i = 0; i < 1000; i++) {
+        // Simulate 100 requests from same IP (within capacity)
+        for (int i = 0; i < 100; i++) {
             MockFilterChain filterChain = new MockFilterChain();
             MockHttpServletRequest request = new MockHttpServletRequest();
             request.setRemoteAddr("127.0.0.1");
@@ -27,7 +27,7 @@ class RateLimitFilterTest {
             assertEquals(200, response.getStatus(), "Request " + i + " should succeed");
         }
 
-        // The 1001st request should fail
+        // The 101st request should fail
         MockFilterChain filterChain = new MockFilterChain();
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setRemoteAddr("127.0.0.1");
@@ -35,7 +35,7 @@ class RateLimitFilterTest {
 
         filter.doFilter(request, response, filterChain);
 
-        assertEquals(429, response.getStatus(), "Request 1001 should be rate limited");
+        assertEquals(429, response.getStatus(), "Request 101 should be rate limited");
     }
 
     @Test
