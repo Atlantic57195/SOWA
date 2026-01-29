@@ -313,3 +313,77 @@
 2026-01-30 00:31:34.953 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-01-30 00:31:34.962 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-01-30 00:31:34.969 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-30 00:48:08.016 [Test worker] INFO  c.b.sowa.SowaApplicationTests - Starting SowaApplicationTests using Java 17.0.17 with PID 46536 (started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-30 00:48:08.019 [Test worker] INFO  c.b.sowa.SowaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 00:48:08.815 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-30 00:48:08.874 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2026-01-30 00:48:09.716 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-30 00:48:09.894 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@608eb42e
+2026-01-30 00:48:09.895 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-30 00:48:09.914 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-30 00:48:09.964 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.023s)
+2026-01-30 00:48:09.970 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-30 00:48:09.973 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-30 00:48:10.088 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-30 00:48:10.163 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-30 00:48:10.658 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-30 00:48:10.735 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-30 00:48:11.536 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-30 00:48:11.569 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-30 00:48:11.674 [Test worker] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-30 00:48:12.104 [Test worker] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-30 00:48:12.345 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-30 00:48:13.540 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-30 00:48:13.626 [Test worker] INFO  c.b.sowa.SowaApplicationTests - Started SowaApplicationTests in 5.951 seconds (process running for 7.078)
+2026-01-30 00:48:14.740 [Test worker] WARN  c.berkdagli.sowa.service.NoteService - Unauthorized note access attempt. User: 'test@example.com' tried to access Note ID: '20' owned by User: 'other@example.com'
+2026-01-30 00:48:14.920 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-30 00:48:14.930 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-30 00:48:14.935 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-30 00:48:31.882 [Test worker] INFO  c.b.sowa.SowaApplicationTests - Starting SowaApplicationTests using Java 17.0.17 with PID 38656 (started by kucuk in D:\!lab works\semester_5\SOWA Ruslana\lab10\SOWA)
+2026-01-30 00:48:31.884 [Test worker] INFO  c.b.sowa.SowaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-01-30 00:48:32.716 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-30 00:48:32.776 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2026-01-30 00:48:33.715 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-30 00:48:33.848 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@71687d8f
+2026-01-30 00:48:33.850 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-30 00:48:33.863 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:sowa.db (SQLite 3.47)
+2026-01-30 00:48:33.910 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.022s)
+2026-01-30 00:48:33.915 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-01-30 00:48:33.918 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+2026-01-30 00:48:34.012 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-30 00:48:34.067 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-01-30 00:48:34.436 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-30 00:48:34.497 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:sowa.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-30 00:48:35.070 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-30 00:48:35.095 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-30 00:48:35.170 [Test worker] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-30 00:48:35.458 [Test worker] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-30 00:48:35.587 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-01-30 00:48:36.377 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-01-30 00:48:36.464 [Test worker] INFO  c.b.sowa.SowaApplicationTests - Started SowaApplicationTests in 4.903 seconds (process running for 6.028)
+2026-01-30 00:48:37.322 [Test worker] WARN  c.berkdagli.sowa.service.NoteService - Unauthorized note access attempt. User: 'test@example.com' tried to access Note ID: '20' owned by User: 'other@example.com'
+2026-01-30 00:48:37.474 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-30 00:48:37.483 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-30 00:48:37.488 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

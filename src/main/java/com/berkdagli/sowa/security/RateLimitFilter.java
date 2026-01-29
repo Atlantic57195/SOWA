@@ -19,7 +19,7 @@ public class RateLimitFilter extends OncePerRequestFilter {
     private final Map<String, UserBucket> buckets = new ConcurrentHashMap<>();
 
     // allow 1000 requests per minute
-    private static final long CAPACITY = 101;
+    private static final long CAPACITY = 100;
     private static final long REFILL_DURATION_SECONDS = 60; // 1 minute
 
     @Override
