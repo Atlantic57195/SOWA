@@ -31,6 +31,8 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
         logger.warn("Unauthorized access attempt (403). User: '{}', Resource: '{}', IP: '{}'",
                 user, uri, remoteAddr);
 
-        response.sendRedirect(request.getContextPath() + "/access-denied");
+        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+
+        request.getRequestDispatcher("/access-denied").forward(request, response);
     }
 }

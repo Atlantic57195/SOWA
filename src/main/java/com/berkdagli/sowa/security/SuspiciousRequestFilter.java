@@ -21,10 +21,6 @@ public class SuspiciousRequestFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-        // Simple heuristic for suspicious requests (e.g., potential SQL injection or
-        // XSS patterns in params)
-        // NOTE: This is basic. For production, use a WAF or more robust validation.
-
         Enumeration<String> parameterNames = request.getParameterNames();
         while (parameterNames.hasMoreElements()) {
             String paramName = parameterNames.nextElement();
@@ -37,8 +33,6 @@ public class SuspiciousRequestFilter extends OncePerRequestFilter {
                         String uri = request.getRequestURI();
                         logger.warn("Suspicious input detected. IP: '{}', URI: '{}', Param: '{}', Value: '{}'",
                                 remoteAddr, uri, paramName, value);
-                        // Depending on policy, you might want to block the request here.
-                        // For now, we just log it.
                     }
                 }
             }
