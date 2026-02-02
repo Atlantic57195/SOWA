@@ -35,9 +35,10 @@ The server will start at `http://localhost:8080`.
 
 ### 1. Client Pages (Thymeleaf Views)
 These endpoints return HTML pages rendered on the server.
-- **Home/Hello:** `GET /hello` - Accessible to authenticated users.
+- **Root/Login:** `GET /` - Redirects to login page or serves login page.
 - **Login:** `GET /login` - Custom login page.
 - **Register:** `GET /register` - Registration page.
+- **Home/Hello:** `GET /hello` - Accessible to authenticated users.
 - **Admin Dashboard:** `GET /admin` - Restricted to users with `ADMIN` role.
 - **Access Denied:** `GET /access-denied` - Shown when a user tries to access unauthorized content.
 
@@ -68,6 +69,14 @@ JSON endpoints for programmatic user management.
   ```
 - **Responses:**
   - `201 Created`: User object (JSON)
+    ```json
+    {
+        "id": 1,
+        "username": "testuser",
+        "email": "test@example.com",
+        "role": "USER"
+    }
+    ```
   - `400 Bad Request`: Validation error or Email already taken (JSON)
 
 #### Login User
@@ -82,6 +91,12 @@ JSON endpoints for programmatic user management.
   ```
 - **Responses:**
   - `200 OK`: Success message (JSON)
+    ```json
+    {
+        "message": "Login successful",
+        "username": "testuser"
+    }
+    ```
   - `400 Bad Request`: Invalid credentials (JSON)
 
 ## Project Structure

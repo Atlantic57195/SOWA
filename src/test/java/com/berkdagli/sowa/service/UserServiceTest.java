@@ -37,7 +37,6 @@ public class UserServiceTest {
 
     @Test
     void createUser_Success() {
-        System.out.println("Running createUser_Success...");
         // Arrange
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.empty());
         when(passwordEncoder.encode(any(String.class))).thenReturn("encodedPassword");
@@ -60,12 +59,10 @@ public class UserServiceTest {
         verify(userRepository).findByEmail("test@example.com");
         verify(passwordEncoder).encode("password");
         verify(userRepository).save(any(User.class));
-        System.out.println("createUser_Success: User created successfully with ID " + createdUser.getId());
     }
 
     @Test
     void createUser_EmailTaken() {
-        System.out.println("Running createUser_EmailTaken...");
         // Arrange
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.of(testUser));
 
@@ -79,12 +76,10 @@ public class UserServiceTest {
         verify(userRepository).findByEmail("test@example.com");
         verify(passwordEncoder, never()).encode(any(String.class));
         verify(userRepository, never()).save(any(User.class));
-        System.out.println("createUser_EmailTaken: Caught expected exception -> " + exception.getMessage());
     }
 
     @Test
     void authenticate_Success() {
-        System.out.println("Running authenticate_Success...");
         // Arrange
         testUser.setPassword("encodedPassword"); // set encoded password on user found in DB
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.of(testUser));
@@ -99,12 +94,10 @@ public class UserServiceTest {
 
         verify(userRepository).findByEmail("test@example.com");
         verify(passwordEncoder).matches("rawPassword", "encodedPassword");
-        System.out.println("authenticate_Success: User authenticated successfully: " + authenticatedUser.getUsername());
     }
 
     @Test
     void authenticate_InvalidCredentials() {
-        System.out.println("Running authenticate_InvalidCredentials...");
         // Arrange
         testUser.setPassword("encodedPassword");
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.of(testUser));
@@ -119,12 +112,10 @@ public class UserServiceTest {
 
         verify(userRepository).findByEmail("test@example.com");
         verify(passwordEncoder).matches("wrongPassword", "encodedPassword");
-        System.out.println("authenticate_InvalidCredentials: Caught expected exception -> " + exception.getMessage());
     }
 
     @Test
     void authenticate_UserNotFound() {
-        System.out.println("Running authenticate_UserNotFound...");
         // Arrange
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.empty());
 
@@ -137,12 +128,10 @@ public class UserServiceTest {
 
         verify(userRepository).findByEmail("nonexistent@example.com");
         verify(passwordEncoder, never()).matches(anyString(), anyString());
-        System.out.println("authenticate_UserNotFound: Caught expected exception -> " + exception.getMessage());
     }
 
     @Test
     void loadUserByUsername_Success() {
-        System.out.println("Running loadUserByUsername_Success...");
         // Arrange
         testUser.setPassword("encodedPassword"); // matches UserDetails expect
         when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(testUser));
@@ -159,12 +148,10 @@ public class UserServiceTest {
                 .anyMatch(a -> a.getAuthority().equals("ROLE_USER")));
 
         verify(userRepository).findByEmail("test@example.com");
-        System.out.println("loadUserByUsername_Success: Loaded user details.");
     }
 
     @Test
     void loadUserByUsername_UserNotFound() {
-        System.out.println("Running loadUserByUsername_UserNotFound...");
         // Arrange
         when(userRepository.findByEmail("nonexistent@example.com")).thenReturn(Optional.empty());
 
@@ -174,6 +161,5 @@ public class UserServiceTest {
         });
 
         verify(userRepository).findByEmail("nonexistent@example.com");
-        System.out.println("loadUserByUsername_UserNotFound: Caught expected exception.");
     }
 }

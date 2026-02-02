@@ -1,6 +1,7 @@
 package com.berkdagli.sowa.controller;
 
 import com.berkdagli.sowa.dto.UserLoginDto;
+import com.berkdagli.sowa.dto.LoginResponseDto;
 import com.berkdagli.sowa.dto.UserRegisterDto;
 import com.berkdagli.sowa.dto.UserResponseDto;
 import com.berkdagli.sowa.model.User;
@@ -8,8 +9,6 @@ import com.berkdagli.sowa.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -36,10 +35,10 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Valid @RequestBody UserLoginDto request) {
+    public ResponseEntity<LoginResponseDto> login(@Valid @RequestBody UserLoginDto request) {
         User user = userService.authenticate(
                 request.getEmail(),
                 request.getPassword());
-        return ResponseEntity.ok(Map.of("message", "Login successful", "username", user.getUsername()));
+        return ResponseEntity.ok(new LoginResponseDto("Login successful", user.getUsername()));
     }
 }

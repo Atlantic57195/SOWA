@@ -46,7 +46,6 @@ public class NoteServiceTest {
 
     @Test
     void findAllByUserEmail_Success() {
-        System.out.println("Running findAllByUserEmail_Success...");
         // Arrange
         when(userRepository.findByEmail("test@example.com")).thenReturn(Optional.of(testUser));
         when(noteRepository.findByUserIdNative(1L)).thenReturn(Collections.singletonList(testNote));
@@ -62,12 +61,10 @@ public class NoteServiceTest {
 
         verify(userRepository).findByEmail("test@example.com");
         verify(noteRepository).findByUserIdNative(1L);
-        System.out.println("findAllByUserEmail_Success: Found " + notes.size() + " notes.");
     }
 
     @Test
     void findByIdAndUserEmail_Success() {
-        System.out.println("Running findByIdAndUserEmail_Success...");
         // Arrange
         when(noteRepository.findById(10L)).thenReturn(Optional.of(testNote));
 
@@ -80,12 +77,10 @@ public class NoteServiceTest {
         assertEquals("Title", note.getTitle());
 
         verify(noteRepository).findById(10L);
-        System.out.println("findByIdAndUserEmail_Success: Note found successfully.");
     }
 
     @Test
     void findByIdAndUserEmail_AccessDenied() {
-        System.out.println("Running findByIdAndUserEmail_AccessDenied...");
         // Arrange
         User otherUser = new User("other", "other@example.com", "password", "USER");
         Note otherNote = new Note("Other Title", "Content", otherUser);
@@ -100,12 +95,10 @@ public class NoteServiceTest {
 
         assertEquals("You do not have permission to access this note", exception.getMessage());
         verify(noteRepository).findById(20L);
-        System.out.println("findByIdAndUserEmail_AccessDenied: Caught expected exception -> " + exception.getMessage());
     }
 
     @Test
     void findByIdAndUserEmail_NotFound() {
-        System.out.println("Running findByIdAndUserEmail_NotFound...");
         // Arrange
         when(noteRepository.findById(99L)).thenReturn(Optional.empty());
 
@@ -116,12 +109,10 @@ public class NoteServiceTest {
 
         assertEquals("Note not found", exception.getMessage());
         verify(noteRepository).findById(99L);
-        System.out.println("findByIdAndUserEmail_NotFound: Caught expected exception -> " + exception.getMessage());
     }
 
     @Test
     void createNote_Success() {
-        System.out.println("Running createNote_Success...");
         // Arrange
         NoteDto noteDto = new NoteDto(); // Assuming NoteDto has setter or default constructor
         noteDto.setTitle("New Title");
@@ -136,12 +127,10 @@ public class NoteServiceTest {
         // Assert
         verify(userRepository).findByEmail("test@example.com");
         verify(noteRepository).save(any(Note.class));
-        System.out.println("createNote_Success: Note created.");
     }
 
     @Test
     void updateNote_Success() {
-        System.out.println("Running updateNote_Success...");
         // Arrange
         NoteDto noteDto = new NoteDto();
         noteDto.setTitle("Updated Title");
@@ -158,12 +147,10 @@ public class NoteServiceTest {
         assertEquals("Updated Content", testNote.getContent());
         verify(noteRepository).findById(10L);
         verify(noteRepository).save(testNote);
-        System.out.println("updateNote_Success: Note updated.");
     }
 
     @Test
     void deleteNote_Success() {
-        System.out.println("Running deleteNote_Success...");
         // Arrange
         when(noteRepository.findById(10L)).thenReturn(Optional.of(testNote));
 
@@ -173,12 +160,10 @@ public class NoteServiceTest {
         // Assert
         verify(noteRepository).findById(10L);
         verify(noteRepository).delete(testNote);
-        System.out.println("deleteNote_Success: Note deleted.");
     }
 
     @Test
     void getAllNotes_Success() {
-        System.out.println("Running getAllNotes_Success...");
         // Arrange
         when(noteRepository.findAll()).thenReturn(java.util.Collections.singletonList(testNote));
 
@@ -190,6 +175,5 @@ public class NoteServiceTest {
         assertEquals(1, notes.size());
         assertEquals(testNote, notes.get(0));
         verify(noteRepository).findAll();
-        System.out.println("getAllNotes_Success: Found all notes.");
     }
 }

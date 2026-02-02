@@ -40,3 +40,7 @@ out/
 ### Database ###
 *.db
 *.sqlite
+
+### Compiled and Logs ###
+bin/
+logs/
