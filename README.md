@@ -1,5 +1,5 @@
 # SOWA - Spring Boot Application
-
+# Checklist Included 
 ## Project Description
 SOWA is a Spring Boot application featuring user authentication, database migration with Flyway, and SQLite persistence.
 
