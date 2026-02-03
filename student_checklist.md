@@ -15,7 +15,7 @@
 
 **Registration**
 - [x] I can register a new user live
-- [x] I can intentionally submit invalid input and show validation errors (Verified via [UserRegisterDto](file:///d:/%21lab%20works/semester_5/SOWA%20Ruslana/lab10/SOWA/src/main/java/com/berkdagli/sowa/dto/UserRegisterDto.java#8-22) constraints)
+- [x] I can intentionally submit invalid input and show validation errors (Verified via [UserRegisterDto](./src/main/java/com/berkdagli/sowa/dto/UserRegisterDto.java#8-22) constraints)
 - [x] Passwords are stored hashed (bcrypt/Argon2) (Verified via `BCryptPasswordEncoder` in [SecurityConfig.java](file:///d:/%21lab%20works/semester_5/SOWA%20Ruslana/lab10/SOWA/src/main/java/com/berkdagli/sowa/config/SecurityConfig.java) and usage in [UserService.java](file:///d:/%21lab%20works/semester_5/SOWA%20Ruslana/lab10/SOWA/src/main/java/com/berkdagli/sowa/service/UserService.java))
 - [x] I can explain where password hashing happens in my code (`UserService.createUser` method)
 
