@@ -44,12 +44,40 @@ These endpoints return HTML pages rendered on the server.
 
 ### 2. Note Operations
 Standard CRUD operations for notes, handled via HTML forms and redirects.
-- **List Notes:** `GET /notes` - Displays all notes for the current user.
-- **New Note Form:** `GET /notes/new` - Shows the form to create a new note.
-- **Create Note:** `POST /notes` - Handles the creation of a note.
-- **Edit Note Form:** `GET /notes/edit/{id}` - Shows the form to edit an existing note.
-- **Update Note:** `POST /notes/update/{id}` - Handles the update of a note.
-- **Delete Note:** `POST /notes/delete/{id}` - Deletes a specific note.
+
+#### List Notes
+- **Method:** `GET`
+- **Path:** `/notes`
+- **Description:** Displays a list of all notes belonging to the authenticated user.
+- **Response:** HTML View (`notes/list`)
+
+#### Create Note
+- **Method:** `POST`
+- **Path:** `/notes`
+- **Description:** Creates a new note.
+- **Form Data:**
+  - `title`: Title of the note (1-255 characters).
+  - `content`: Content of the note.
+- **Response:** Redirects to `/notes` on success.
+
+#### Update Note
+- **Method:** `POST`
+- **Path:** `/notes/update/{id}`
+- **Description:** Updates an existing note.
+- **Form Data:**
+  - `title`: New title.
+  - `content`: New content.
+- **Response:** Redirects to `/notes` on success.
+
+#### Delete Note
+- **Method:** `POST`
+- **Path:** `/notes/delete/{id}`
+- **Description:** Deletes the specified note.
+- **Response:** Redirects to `/notes`.
+
+#### Helper Forms
+- **New Note Form:** `GET /notes/new` - Renders the form to create a new note.
+- **Edit Note Form:** `GET /notes/edit/{id}` - Renders the form to edit an existing note.
 
 ### 3. REST API (User Management)
 JSON endpoints for programmatic user management.
@@ -98,6 +126,16 @@ JSON endpoints for programmatic user management.
     }
     ```
   - `400 Bad Request`: Invalid credentials (JSON)
+
+## Testing
+The application includes JUnit 5 tests with Mockito for the service layer and security components.
+
+### 1. Service Layer Tests
+- **NoteServiceTest**: verifies business logic for note operations (CRUD).
+- **UserServiceTest**: verifies user registration and authentication logic.
+
+### 2. Security Tests
+- **RateLimitFilterTest**: verifies that the rate limiting filter correctly allows requests within the limit and blocks excess requests.
 
 ## Project Structure
 - `model`: JPA entities

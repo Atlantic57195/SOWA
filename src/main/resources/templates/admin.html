@@ -61,7 +61,7 @@
             <tbody>
                 <tr th:each="note : ${notes}" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <td th:text="${note.id}" style="padding: 8px;">1</td>
-                    <td th:text="${note.user.email}" style="padding: 8px;">user@example.com</td>
+                    <td th:text="${note.user != null ? note.user.email : 'Unknown'}" style="padding: 8px;">user@example.com</td>
                     <td th:text="${note.title}" style="padding: 8px;">Title</td>
                     <td th:text="${#strings.abbreviate(note.content, 50)}" style="padding: 8px;">Content...</td>
                 </tr>
